@@ -1,6 +1,6 @@
 # Welcome to the Maps iFrame Definition Html
 
-![Plugin Logo](plugin_logo.png)
+![Plugin Logo](plugin.png)
 
 👋 Welcome to the official repository of the XYZ Plugin! We're thrilled to introduce you to our powerful and versatile software plugin, meticulously crafted by our talented team of software engineers. Whether you're a developer, designer, or an enthusiast, this plugin aims to enhance your experience by bringing a new dimension to your workflow.
 
