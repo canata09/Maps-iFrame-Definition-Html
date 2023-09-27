@@ -4,7 +4,7 @@
 
 👋 Welcome to the official repository of the XYZ Plugin! We're thrilled to introduce you to our powerful and versatile software plugin, meticulously crafted by our talented team of software engineers. Whether you're a developer, designer, or an enthusiast, this plugin aims to enhance your experience by bringing a new dimension to your workflow.
 
-## What is the Perfect Number Definition Javascript?
+## What is the Perfect Maps iFrame Definition Html?
 
 You can use an iframe to insert Maps into your HTML document. Below you can find an example of an iframe for Google Maps.
 
