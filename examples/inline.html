@@ -3,395 +3,119 @@
 <html lang="en">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 
 
-  <title>myHOME</title>
+    <title>myHOME</title>
 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="myHOME - real estate template project">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="myHOME - real estate template project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
-
-<style>
-  
-
-
-.container_reset > .map-container
-{
-	max-width: 100%;
-	padding-left: 0;
-	padding-right: 0;
-}
-.container_reset > .map-container > .row
-{
-	margin-left: 0;
-	margin-right: 0;
-}
-.container_reset > .map-container > .row > div[class^="col"]
-{
-	padding-left: 0;
-	padding-right: 0;
-}
-.map
-{
-	width: 100%;
-	height: 100%;
-}
-.google_map
-{
-	width: 100%;
-	height: 100%;
-	min-height: 595px;
-}
-.map_container
-{
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-}
-#map
-{
-	width: 100%;
-	height: calc(100% + 30px);
-}
-.map_section_content
-{
-	height: 100%;
-	background: #55407d;
-	padding-left: 82px;
-	padding-top: 91px;
-	padding-right: 92px;
-	padding-bottom: 92px;
-}
-.map_overlay
-{
-	position: absolute;
-	top: 0;
-	left: -233px;
-	width: 233px;
-	height: 100%;
-}
-.map_section .section_title h1
-{
-	color: #ffffff;
-	font-weight: 400;
-}
-.location_contaner:not(:last-child)
-{
-	margin-bottom: 20px;
-}
-.locations_list
-{
-	margin-top: 44px;
-}
-.location_contaner
-{
-	display: inline-block;
-	position: relative;
-	cursor: pointer;
-	padding-left: 29px;
-	font-size: 18px;
-	font-weight: 400;
-	color: #ffffff;
-	margin-bottom: 0px;
-	line-height: 1;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-}
-.location_contaner > input
-{
-	position: absolute;
-	opacity: 0;
-	cursor: pointer;
-}
-.location_contaner > span
-{
-	position: absolute;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	-o-transform: translateY(-50%);
-	transform: translateY(-50%);
-	background: transparent;
-	left: 0;
-	width: 14px;
-	height: 14px;
-	border: solid 2px #adc867;
-	border-radius: 50%;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
-.location_contaner > input:checked ~ span
-{
-	background: #adc867;
-}
-.location_contaner > input:not(:checked):hover ~ span
-{
-	background: #adc867;
-	opacity: 0.5;
-}
-
-*,
-::after,
-::before {
-    box-sizing: border-box
-}
-
-html {
-    font-family: sans-serif;
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    -ms-overflow-style: scrollbar;
-    -webkit-tap-highlight-color: transparent
-}
-
-
-
-.container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto
-}
-
-@media (min-width:576px) {
-    .container {
-        max-width: 540px
-    }
-}
-
-@media (min-width:768px) {
-    .container {
-        max-width: 720px
-    }
-}
-
-@media (min-width:992px) {
-    .container {
-        max-width: 960px
-    }
-}
-
-@media (min-width:1200px) {
-    .container {
-        max-width: 1140px
-    }
-}
-
-.container-fluid {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto
-}
-
-.row {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px
-}
-
-.no-gutters {
-    margin-right: 0;
-    margin-left: 0
-}
-
-.no-gutters>.col,
-.no-gutters>[class*=col-] {
-    padding-right: 0;
-    padding-left: 0
-}
-
-.col,
-.col-xl-5,
-
-.col-xl-7,
-
-.col-xl-auto {
-    position: relative;
-    width: 100%;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px
-}
-
-.col {
-    -ms-flex-preferred-size: 0;
-    flex-basis: 0;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    max-width: 100%
-}
-
-.col-auto {
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    width: auto;
-    max-width: none
-}
-
-
-
-
-.col-7 {
-    -ms-flex: 0 0 58.333333%;
-    flex: 0 0 58.333333%;
-    max-width: 58.333333%
-}
-
-
-
-
-
-@media (min-width:1200px) {
-
-    .col-xl-5 {
-        -ms-flex: 0 0 41.666667%;
-        flex: 0 0 41.666667%;
-        max-width: 41.666667%
-    }
-
-
-    .col-xl-7 {
-        -ms-flex: 0 0 58.333333%;
-        flex: 0 0 58.333333%;
-        max-width: 58.333333%
-    }
-
-
-    .order-xl-7 {
-        -ms-flex-order: 7;
-        order: 7
-    }
-
-
-    .offset-xl-7 {
-        margin-left: 58.333333%
-    }
-
-}
-
-
-</style>
+        
 </head>
 
 <body>
-  <div class="super_container">
+    <div class="super_container" style="box-sizing: border-box;">
 
 
 
 
-    <div class="map_section container_reset">
-      <div class="container">
-        <div class="row row-xl-eq-height">
+        <div class="map_section container_reset">
+            <div class="container" style="
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            box-sizing: border-box;
+                ">
+                <div class="row row-xl-eq-height">
 
-          <div class="col-xl-7 order-xl-1 order-2">
-            <div class="map">
-              <div id="google_map" class="google_map">
-                <div class="mapouter">
-                  <div class="gmap_canvas">
-          
-          
-                      <iframe
-          
-                          src="https://maps.google.com/maps?q=Ankara%20Cebeci%20Ulucanlar&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
-          
-                          frameborder="0" 
-                          scrolling="no" 
-                          style="width: 100%; height: 640px; border:0;"
-                          allowfullscreen
-          
-                      ></iframe>
-                      
-          
-          
-                  </div>
-              </div>
-              </div>
-            </div>
-          </div>
+                    <div class="col-xl-7 order-xl-1 order-2" style="
+            position: relative;
+            width: 100%;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px;
+            -ms-flex: 0 0 58.333333%;
+            flex: 0 0 58.333333%;
+            max-width: 58.333333%
+                        ">
+                        <div class="map">
+                            <div id="google_map" class="google_map">
+                                <div class="mapouter">
+                                    <div class="gmap_canvas">
 
-          <div class="col-xl-5 order-xl-2 order-1">
-            <div class="map_section_content">
-              <div class="map_overlay">
-                <svg fill="#55407d" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-                  <path d="M100,0 a-200,150 0 0 0 -100,100 h100 v-100 z"></path>
-                </svg>
-              </div>
-              <div class="section_title_container">
-                <div class="section_subtitle">the best deals</div>
-                <div class="section_title">
-                  <h1>Choose a location</h1>
+
+                                        <iframe
+                                            src="https://maps.google.com/maps?q=Ankara%20Cebeci%20Ulucanlar&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                                            frameborder="0" scrolling="no" style="width: 100%; height: 640px; border:0;"
+                                            allowfullscreen></iframe>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="col-xl-5 order-xl-2 order-1" style="
+            position: relative;
+            width: 100%;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px;
+            -ms-flex: 0 0 41.666667%;
+            flex: 0 0 41.666667%;
+            max-width: 41.666667%
+                    ">
+                        <div class="map_section_content" style="
+            height: 100%;
+            background: #55407d;
+            padding-left: 82px;
+            padding-top: 91px;
+            padding-right: 92px;
+            padding-bottom: 92px;
+                            ">
+                            <div class="map_overlay" style="
+            position: absolute;
+            top: 0;
+            left: -233px;
+            width: 233px;
+            height: 100%;
+                            ">
+                                <svg fill="#55407d" width="100%" height="100%" viewBox="0 0 100 100"
+                                    preserveAspectRatio="none">
+                                    <path d="M100,0 a-200,150 0 0 0 -100,100 h100 v-100 z"></path>
+                                </svg>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="locations_list d-flex flex-column align-items-start justify-content-start">
-                <label class="location_contaner" data-lat="25.794923" data-lng="-80.133661">
-                  <input type="radio" name="location_radio">
-                  <span></span>
-                  Downtown Miami
-                </label>
-                <label class="location_contaner" data-lat="41.872883" data-lng="-87.660943">
-                  <input type="radio" name="location_radio">
-                  <span></span>
-                  Chicago
-                </label>
-                <label class="location_contaner" data-lat="40.779528" data-lng="-73.960561">
-                  <input type="radio" name="location_radio" checked="">
-                  <span></span>
-                  Manhattan - New York
-                </label>
-                <label class="location_contaner" data-lat="34.082539" data-lng="-118.380126">
-                  <input type="radio" name="location_radio">
-                  <span></span>
-                  West Hollywood
-                </label>
-                <label class="location_contaner" data-lat="38.910263" data-lng="-77.020496">
-                  <input type="radio" name="location_radio">
-                  <span></span>
-                  Washington
-                </label>
-                <label class="location_contaner" data-lat="39.296713" data-lng="-76.634918">
-                  <input type="radio" name="location_radio">
-                  <span></span>
-                  Maryland
-                </label>
-                <label class="location_contaner" data-lat="37.806964" data-lng="-122.411291">
-                  <input type="radio" name="location_radio">
-                  <span></span>
-                  San Francisco
-                </label>
-                <label class="location_contaner" data-lat="33.627738" data-lng="-117.909449">
-                  <input type="radio" name="location_radio">
-                  <span></span>
-                  Orange County
-                </label>
-              </div>
             </div>
-          </div>
+
+
+
         </div>
-      </div>
     </div>
 
 
 
 
 
-  </div>
+    </div>
 
 
 </body>
