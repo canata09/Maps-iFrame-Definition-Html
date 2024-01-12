@@ -46,7 +46,7 @@ For additional assistance, you can also contact our support team at support@xyzp
 
 ## Contributing
 
-We welcome contributions from the community! If you're interested in improving the XYZ Plugin, please review our [Contribution Guidelines](contributing.md).
+We welcome contributions from the community! If you're interested in improving the Maps iFrame Definition Html, please review our [Contribution Guidelines](contributing.md).
 
 ## Stay Connected
 
